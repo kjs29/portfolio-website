@@ -49,15 +49,62 @@ div[class*="dot"] {
 
 main {
     display: grid;
-    grid-template-columns: 3rem 1fr 2fr;
+    grid-template-columns: 4rem 1fr 2fr;
     border: 1px solid orange;
 }
 
 /* nav */
 
+nav {
+    background-color: black;
+}
+
 main nav ul {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
+    margin: 0 auto;
+    margin-top: 3rem;
+    align-items: center;
+}
+
+main nav a {
+    visibility: hidden;
+    color: white;
+}
+
+main nav li {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-bottom: 4rem;
+}
+
+main nav li:nth-child(1),
+main nav li:nth-child(2),
+main nav li:nth-child(3),
+main nav li:nth-child(4) {
+    background-size: cover;
+}
+
+main nav li:nth-child(1) {
+    background-image: url('../img/aboutme.png');
+}
+
+main nav li:nth-child(2) {
+    background-image: url('../img/skills.png');
+}
+
+main nav li:nth-child(3) {
+    background-image: url('../img/projects.png');
+}
+
+main nav li:nth-child(4) {
+    background-image: url('../img/contact-us.png');
+}
+
+main nav li.active {
+    border: 1px solid white;
 }
 
 /* left */
@@ -95,6 +142,24 @@ main nav ul {
     border: 1px dotted black;
 }
 
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    main {
+        grid-template-columns: 3rem 1fr 2fr;
+    }
+
+    main nav li {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 768px) { }
+
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:576px) {
     body {
@@ -128,9 +193,37 @@ main nav ul {
 
     main nav ul {
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
-        list-style-type: none;
-        padding: 0;
+        align-items: center;
+        margin: 0;
+    }
+    
+    main nav li {
+        margin: 0;
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    main nav li:nth-child(1),
+    main nav li:nth-child(2),
+    main nav li:nth-child(3),
+    main nav li:nth-child(4) {
+        background-image: unset;
+    }
+    
+    main nav li.active {
+        border: none;
+    }
+
+    main nav a {
+        display: block;
+        visibility: visible;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 0.8rem;
     }
 
     .left {
@@ -142,12 +235,3 @@ main nav ul {
         overflow-y: scroll;
     }
 }
-
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) { }
-
-/* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {  }
-
-/* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {  }
