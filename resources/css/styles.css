@@ -7,6 +7,7 @@ html {
 }
 
 body {
+    font-family: 'Courier New', Courier, monospace;
     width: 90%;
     max-width: 1200px;
     margin: 2rem auto;
@@ -111,20 +112,78 @@ main nav li.active {
 /* left */
 
 .left {
-    /* max-width: 350px; */
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    font-size: 1.5rem;
 }
 
 /* code */
 
 .code {
+    flex-grow: 1;
     display: flex;
+    overflow-x: auto;    
     flex-direction: column;
-    overflow-y: scroll;
+    padding-left: 0.5rem;
+}
+
+.code::-webkit-scrollbar {
+    width: 2rem;
+}
+
+.code::-webkit-scrollbar-thumb {
+    background-color: rgba(110, 195, 223, 0.5);
+}
+
+.code::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(110, 195, 223, 1);
 }
 
 .breadcrumb {
     border: 2px dotted blue;
-    height: 1.5rem;
+    
+}
+
+.source-code {
+    counter-reset: line;
+    overflow-x: auto;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.source-code p {
+    margin: 0;
+    padding: 0;
+}
+
+/* terminal */
+
+.terminal {
+    flex-basis: 10rem;
+    border: 1px solid red;
+}
+
+.source-code *:before {
+    counter-increment: line;
+    content: counter(line);
+}
+
+/* select 1 to 9th element */
+.source-code p:nth-child(-n+9):before {
+    margin-left: 1.8rem;
+    margin-right: 1rem;
+}
+
+/* select 10th to 99th element */
+.source-code p:nth-child(n+10):nth-child(-n+99):before {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* select 100th and all following elements */
+.source-code p:nth-child(n+100):before {
+    margin-right: 1rem;
 }
 
 .terminal-top {
