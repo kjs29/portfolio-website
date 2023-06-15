@@ -29,7 +29,7 @@ body {
     background-color: black;
 }
 
-div[class*="dot"] {
+[class*="dot"] {
     width: 1.4rem;
     height: 1.4rem;
     border-radius: 0.8rem;
@@ -116,9 +116,16 @@ main nav li.active {
     flex-direction: column;
     overflow-x: auto;
     font-size: 1.5rem;
+    min-width: 25rem;
 }
 
 /* code */
+
+.breadcrumb {
+    border: 2px dotted white;
+    background-color: black;
+    color: white;
+}
 
 .code {
     flex-grow: 1;
@@ -142,12 +149,6 @@ main nav li.active {
     background-color: rgba(110, 195, 223, 1);
 }
 
-.breadcrumb {
-    border: 2px dotted white;
-    background-color: black;
-    color: white;
-}
-
 .source-code {
     counter-reset: line;
     overflow-x: auto;
@@ -158,13 +159,6 @@ main nav li.active {
 .source-code p {
     margin: 0;
     padding: 0;
-}
-
-/* terminal */
-
-.terminal {
-    flex-basis: 10rem;
-    border: 1px solid red;
 }
 
 .source-code *:before {
@@ -189,14 +183,50 @@ main nav li.active {
     margin-right: 1rem;
 }
 
+/* terminal */
+
+.terminal {
+    flex-basis: 20rem;
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
 .terminal-top {
     display: inline-flex;
-    gap: 0.5rem;
+    gap: 3rem;
     align-items: flex-start;
-    margin: 0 0.5rem;
+    justify-content: flex-start;
+    padding: 0.8rem;
     text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
+    text-align: center;   
+}
+
+.terminal-middle {
+    margin-left: 1.3rem;
+}
+
+.terminal-command {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    align-items: flex-start;
+    padding: 0;
+}
+
+.terminal-command p {
+    margin: 0;
+}
+
+.blue-dot {
+    display: inline-block;
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0 0.2rem;
+    background-color: rgb(0, 128, 255);
 }
 
 /* output */
@@ -228,6 +258,10 @@ main nav li.active {
         width: 2rem;
         height: 2rem;
     }
+
+    .terminal-top div:nth-child(-n+2) {
+        display: none;
+    }
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -246,7 +280,7 @@ main nav li.active {
         gap: 0.6rem;
     }
     
-    div[class*="dot"] {
+    [class*="dot"] {
         width: 1rem;
         height: 1rem;
     }
