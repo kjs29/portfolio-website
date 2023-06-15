@@ -15,11 +15,10 @@ body {
 }
 
 .wrapper {
-    border: 2px solid red;
+    border: 3px solid #6EC3DF;
 }
 
 .top {
-    /* border: 2px dotted pink; */
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -27,6 +26,7 @@ body {
     height: 1.5rem;
     gap: 0.8rem;
     background-color: black;
+    border-bottom: 1px solid #6EC3DF;
 }
 
 [class*="dot"] {
@@ -52,13 +52,13 @@ body {
 main {
     display: grid;
     grid-template-columns: 4rem 1fr 2fr;
-    border: 1px solid orange;
 }
 
 /* nav */
 
 nav {
     background-color: black;
+    border-right: 1px solid #6EC3DF;
 }
 
 main nav ul {
@@ -122,9 +122,10 @@ main nav li.active {
 /* code */
 
 .breadcrumb {
-    border: 2px dotted white;
     background-color: black;
     color: white;
+    border-bottom: 1px solid #6EC3DF;
+    padding: 0.4rem;
 }
 
 .code {
@@ -203,6 +204,7 @@ main nav li.active {
     padding: 0.8rem;
     text-transform: uppercase;
     text-align: center;   
+    border-top: 1px solid #6EC3DF;
 }
 
 .terminal-middle {
@@ -232,8 +234,18 @@ main nav li.active {
 /* output */
 
 .output {
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
 }
+
+/* footer */
+
+footer {
+    border-top: 1px solid #6EC3DF;
+    background-color: black;
+    color: white;
+}
+
+/* responsive */
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {  }
