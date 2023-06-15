@@ -11,7 +11,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 2rem auto;
-    background-image: url('../img/background.jpeg');
+    background-image: url('../img/background.jpg');
     background-size: cover;
     /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
