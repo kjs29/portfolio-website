@@ -126,6 +126,8 @@ main nav li.active {
     overflow-x: auto;    
     flex-direction: column;
     padding-left: 0.5rem;
+    background-color: black;
+    color: white;
 }
 
 .code::-webkit-scrollbar {
@@ -141,8 +143,9 @@ main nav li.active {
 }
 
 .breadcrumb {
-    border: 2px dotted blue;
-    
+    border: 2px dotted white;
+    background-color: black;
+    color: white;
 }
 
 .source-code {
