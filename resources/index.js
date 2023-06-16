@@ -58,3 +58,14 @@ document.querySelector('div.green-dot').addEventListener('click', function() {
 //         return false;
 //     }
 // }, false);
+
+// when folder is chrome, change icon
+window.addEventListener("DOMContentLoaded", (event) => {
+    let chromeFolders = document.querySelectorAll(".folder.chrome img");
+    
+    chromeFolders.forEach((img) => {
+        img.src = "../resources/img/chrome.png";
+        img.style.width = '5rem';
+        img.style.height = '5rem';
+    });
+});
