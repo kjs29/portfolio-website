@@ -20,6 +20,22 @@ body {
     border: 3px solid #6EC3DF;
     resize: both;
     overflow: auto;
+    position: relative;
+    height: 80vh;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: 2rem;
+    background-color: black;
+    border: 1px solid rgb(94, 144, 168);
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(110, 195, 223, 0.5);
+}
+
+.wrapper::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(110, 195, 223, 1);
 }
 
 .top {
@@ -31,6 +47,9 @@ body {
     gap: 0.8rem;
     background-color: black;
     border-bottom: 1px solid #6EC3DF;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 [class*="dot"] {
@@ -57,6 +76,7 @@ body {
 main {
     display: grid;
     grid-template-columns: 4rem 1fr 2fr;
+    position: relative;
 }
 
 /* nav */
@@ -76,7 +96,8 @@ main nav ul {
     margin-top: 3rem;
     align-items: center;
 
-    position: fixed;
+    position: sticky;
+    top: 7rem;
 }
 
 main nav a {
@@ -203,7 +224,7 @@ main nav li:hover {
 .code {
     flex-grow: 1;
     display: flex;
-    overflow-x: auto;    
+    overflow-x: auto;
     flex-direction: column;
     padding-left: 0.5rem;
     background-color: black;
@@ -266,6 +287,9 @@ main nav li:hover {
     justify-content: space-between;
     background-color: black;
     color: white;
+
+    position: sticky;
+    bottom: 0;
 }
 
 .terminal-top {
@@ -417,6 +441,10 @@ footer {
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:576px) {
+    .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
     body {
         margin: 0;
         width:100%;
@@ -493,5 +521,19 @@ footer {
     .output {
         width: 100%;
         overflow-y: scroll;
+    }
+
+    .output::-webkit-scrollbar {
+        width: 1.8rem;
+        background-color: black;
+        border: 1px solid rgb(94, 144, 168);
+    }
+
+    .output::-webkit-scrollbar-thumb {
+        background-color: rgba(110, 195, 223, 0.5);
+    }
+    
+    .output::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(110, 195, 223, 1);
     }
 }
