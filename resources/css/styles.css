@@ -11,7 +11,7 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 2rem auto;
-    background-image: url('../img/background.jpeg');
+    background-image: url('../img/background.jpg');
     background-size: cover;
     /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
@@ -38,15 +38,16 @@ body {
 }
 
 .red-dot {
-    background-color: red;
+    background-color: rgb(233, 96, 83);
 }
 
 .yellow-dot {
-    background-color: rgb(240, 195, 14);
+    background-color: rgb(242, 183, 64);
+    cursor: pointer;
 }
 
 .green-dot {
-    background-color: green;
+    background-color: rgb(90, 189, 70);
 }
 
 /* main */
@@ -278,6 +279,10 @@ main nav li:hover {
 
 .terminal-middle {
     margin-left: 1.3rem;
+}
+
+.terminal-middle p {
+    opacity: 0;
 }
 
 .terminal-command {
