@@ -8,7 +8,7 @@ html {
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: 2rem auto;
     background-image: url('../img/background.jpg');
@@ -18,6 +18,8 @@ body {
 
 .wrapper {
     border: 3px solid #6EC3DF;
+    resize: both;
+    overflow: auto;
 }
 
 .top {
