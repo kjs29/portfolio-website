@@ -8,11 +8,14 @@ html {
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    width: 100%;
-    max-width: 1200px;
-    margin: 2rem auto;
+    margin: 0;
     background-image: url('../img/background.jpg');
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid yellow;
+    height: 100vh;
     /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
@@ -21,7 +24,9 @@ body {
     flex-direction: column;
     position: absolute;
     right: 3rem;
+    top: 2rem;
     gap: 3.5rem;
+    align-self: stretch;
 }
 
 .folder {
@@ -49,15 +54,17 @@ body {
     gap: 0.5rem;
 }
 
-/* .folder:hover {
+.folder:hover {
     filter: brightness(85%);
-} */
+}
 
 .wrapper {
     resize: both;
     overflow: auto;
     position: relative;
     height: 80vh;
+    border: 2px solid red;
+    width: 90vh;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -393,14 +400,15 @@ main nav li:hover {
 }
 
 .terminal-top {
-    display: inline-flex;
-    gap: 3rem;
-    align-items: flex-start;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
     justify-content: flex-start;
     padding: 0.8rem;
     text-transform: uppercase;
     text-align: center;   
     border-top: 1px solid #6EC3DF;
+    font-weight: 600;
 }
 
 .terminal-middle {
@@ -524,6 +532,10 @@ footer {
     .left {
         font-size: 1.1rem;
         min-width: 19rem;
+    }
+
+    .terminal-top {
+        justify-content: flex-start;
     }
 
     .terminal-top div:nth-child(-n+2) {
