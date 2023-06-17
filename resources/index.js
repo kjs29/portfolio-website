@@ -1,4 +1,3 @@
-
 // typewriter effect
 async function typeAll() {
     let texts = document.querySelectorAll('.terminal-middle p');
@@ -28,7 +27,6 @@ function type(textNode, text) {
 }
 
 typeAll();
-
 
 // add round button 
 window.onload = function() {
@@ -67,5 +65,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
         img.src = "../resources/img/chrome.png";
         img.style.width = '5rem';
         img.style.height = '5rem';
+    });
+});
+
+
+const folders = document.querySelectorAll('.folder');
+
+function resetFolderStyles() {
+    folders.forEach(folder=> {
+        folder.style.filter = "none" ;
+        folder.lastElementChild.style.color = 'white';
+        folder.lastElementChild.style.border = "1px solid transparent";
+        folder.lastElementChild.style.backgroundColor = "unset";
+    });
+}
+
+document.addEventListener('click', resetFolderStyles);
+
+folders.forEach(folder => {
+    folder.addEventListener('click', event => {
+        event.stopPropagation();
+        let folderStyle = window.getComputedStyle(folder);
+        if (folderStyle.filter === "none") {
+            resetFolderStyles();
+            folder.style.filter = "brightness(0.5)"
+            folder.lastElementChild.style.border = "1px dotted blue";
+            folder.lastElementChild.style.backgroundColor = "blue";
+            folder.lastElementChild.style.color = 'white';
+        } else {
+            resetFolderStyles();
+        }
     });
 });
