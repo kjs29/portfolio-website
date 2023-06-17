@@ -25,7 +25,7 @@ body {
     position: absolute;
     right: 3rem;
     top: 2rem;
-    gap: 3.5rem;
+    gap: 1.8rem;
     align-self: stretch;
 }
 
@@ -40,14 +40,17 @@ body {
 }
 
 .folder img {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 6.5rem;
+    height: 6.5rem;
+    padding: 0.5rem;
     background-size: cover;
+    border: 1.5px solid transparent;
 }
 
 .folder p {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     margin-bottom: 0;
+    padding: 0.1rem;
     border: 1px solid transparent;
 }
 
@@ -98,10 +101,10 @@ body {
     display: flex;
     align-items: center;
     /* border: 2px solid white; */
-    width: 10rem;
-    padding: 1.5rem;
+    width: fit-content;
+    margin: 1.5rem;
     gap: 0.8rem;
-    height:100%;
+    height:fit-content;
 }
 
 .top [class*="dot"] {
@@ -115,10 +118,9 @@ body {
     background-color: rgb(233, 96, 83);
 }
 
-.top .red-dot::before,
-.top .red-dot::after,
-.top .yellow-dot::before,
-.top .yellow-dot::after {
+.red-dot::before,
+.red-dot::after,
+.yellow-dot::before {
     position: absolute;
     content: '';
     height: 1.3px;
@@ -145,8 +147,9 @@ body {
     background-color: rgb(242, 183, 64);
 }
 
-.yellow-dot::before {
-    width: 70%;
+.top .yellow-dot::before {
+    width: 65%;
+    height: 2px;
     background: rgb(158, 104, 33);
 }
 
@@ -167,8 +170,8 @@ body {
 }
 
 .top .green-dot::after {
-    top: 5.3px;
-    left: 5.1px;
+    top: 5.5px;
+    left: 5px;
     position: absolute;
     content: '';
     border-top: 2.8px solid transparent;

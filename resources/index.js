@@ -63,8 +63,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     
     chromeFolders.forEach((img) => {
         img.src = "../resources/img/chrome.png";
-        img.style.width = '5rem';
-        img.style.height = '5rem';
+        img.style.width = "6rem";
+        img.style.height = "6rem";
     });
 });
 
@@ -73,7 +73,8 @@ const folders = document.querySelectorAll('.folder');
 
 function resetFolderStyles() {
     folders.forEach(folder=> {
-        folder.style.filter = "none" ;
+        folder.firstElementChild.style.backgroundColor = "unset";
+        folder.firstElementChild.style.border = "1.5px solid transparent";
         folder.lastElementChild.style.color = 'white';
         folder.lastElementChild.style.border = "1px solid transparent";
         folder.lastElementChild.style.backgroundColor = "unset";
@@ -88,10 +89,13 @@ folders.forEach(folder => {
         let folderStyle = window.getComputedStyle(folder);
         if (folderStyle.filter === "none") {
             resetFolderStyles();
-            folder.style.filter = "brightness(0.5)"
-            folder.lastElementChild.style.border = "1px dotted blue";
-            folder.lastElementChild.style.backgroundColor = "blue";
+            folder.firstElementChild.style.border = "1.5px solid rgba(255,255,255,0.2)";
+            folder.firstElementChild.style.borderRadius = "0.4rem";
+            folder.firstElementChild.style.backgroundColor = "rgba(0,0,0,0.3)";
             folder.lastElementChild.style.color = 'white';
+            folder.lastElementChild.style.backgroundColor = "blue";
+            folder.lastElementChild.style.border = "1px dotted blue";
+            folder.lastElementChild.style.borderRadius = "0.2rem";
         } else {
             resetFolderStyles();
         }
