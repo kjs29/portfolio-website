@@ -57,6 +57,10 @@ body {
     text-align: center;
 }
 
+.folder p:hover {
+    cursor: default;
+}
+
 .chrome {
     gap: 0.5rem;
 }
@@ -98,6 +102,10 @@ body {
     position: sticky;
     top: 0;
     z-index: 2;
+}
+
+.top:hover {
+    cursor: move;
 }
 
 .top > div {
@@ -182,6 +190,10 @@ body {
     border-right: 2.8px solid rgb(38, 86, 20);
     border-bottom: 2.8px solid rgb(38, 86, 20);
     visibility: hidden;
+}
+
+.top > div:hover {
+    cursor: default;
 }
 
 .top > div:hover > div::before,
