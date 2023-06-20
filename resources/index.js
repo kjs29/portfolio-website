@@ -24,14 +24,14 @@ window.onload = function() {
 
 // hide code editor on clicking yellow-dot
 document.querySelector('div.yellow-dot').addEventListener('click', function() {
-    document.querySelector('.wrapper').style.display = 'none';
+    vsCodeWindow.classList.add('minSize');
 });
 
 // maximizing window on clicking green-dot
-document.querySelector('div.green-dot').addEventListener('click', function() {
-    document.querySelector('body').style.maxWidth = '100%';
-    document.querySelector('body').style.margin = '0';
-    document.querySelector('body').style.width = '100%';
+vsCodeWindow.querySelector('div.green-dot').addEventListener('click', function() {
+    vsCodeWindow.classList.toggle ('maxSize');
+    vsCodeWindow.style.left = '0px';
+    vsCodeWindow.style.top = '0px';
 });
 
 // when folder is chrome, change icon

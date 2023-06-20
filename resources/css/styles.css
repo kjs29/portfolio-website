@@ -82,6 +82,16 @@ body {
     min-height: 30rem;
 }
 
+.maxSize {
+    position: fixed;
+    min-width: 100%;
+    height: 100%;
+}
+
+.minSize {
+    display: none;
+}
+
 .wrapper::-webkit-scrollbar {
     width: 2rem;
     background-color: black;
