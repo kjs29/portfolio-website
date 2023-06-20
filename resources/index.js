@@ -24,7 +24,7 @@ window.onload = function() {
 
 // hide code editor on clicking yellow-dot
 document.querySelector('div.yellow-dot').addEventListener('click', function() {
-    vsCodeWindow.classList.add('minSize');
+    vsCodeWindow.style.display = 'none';
 });
 
 // maximizing window on clicking green-dot
@@ -78,6 +78,10 @@ folders.forEach(folder => {
         }
     });
 });
+
+document.querySelector('#my-portfolio').addEventListener('dblclick', function() {
+    vsCodeWindow.style.display = 'unset';
+})
 
 // typewriter effect
 async function typeAll() {

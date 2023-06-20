@@ -88,10 +88,6 @@ body {
     height: 100%;
 }
 
-.minSize {
-    display: none;
-}
-
 .wrapper::-webkit-scrollbar {
     width: 2rem;
     background-color: black;
