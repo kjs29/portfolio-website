@@ -81,6 +81,7 @@ function resetFolderStyles() {
     });
 }
 
+// when folder is clicked, reset folder style
 document.addEventListener('click', resetFolderStyles);
 
 folders.forEach(folder => {
@@ -92,12 +93,29 @@ folders.forEach(folder => {
             folder.firstElementChild.style.border = "1.5px solid rgba(255,255,255,0.2)";
             folder.firstElementChild.style.borderRadius = "0.4rem";
             folder.firstElementChild.style.backgroundColor = "rgba(0,0,0,0.3)";
-            folder.lastElementChild.style.color = 'white';
             folder.lastElementChild.style.backgroundColor = "blue";
+            folder.lastElementChild.style.color = 'white';
             folder.lastElementChild.style.border = "1px dotted blue";
             folder.lastElementChild.style.borderRadius = "0.2rem";
         } else {
             resetFolderStyles();
         }
     });
+});
+
+// drag and drop functionality
+
+let vsCodeWindow = document.querySelector('.wrapper');
+let topWindow = document.querySelector('.top');
+
+topWindow.addEventListener('mousedown', function (e) {
+    const offsetX = e.clientX - vsCodeWindow.offsetLeft;
+    const offsetY= e.clientY - vsCodeWindow.offsetTop;
+    
+    const move = e => {
+        vsCodeWindow.style.left = `${e.clientX - offsetX}px`;
+        vsCodeWindow.style.top = `${e.clientY - offsetY}px`;
+    }
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', () => document.removeEventListener('mousemove', move), { once: true });
 });

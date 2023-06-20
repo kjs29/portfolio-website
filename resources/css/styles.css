@@ -16,6 +16,8 @@ body {
     align-items: center;
     border: 5px solid yellow;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
     /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
@@ -72,7 +74,7 @@ body {
 .wrapper {
     resize: both;
     overflow: auto;
-    position: relative;
+    position: absolute;
     height: 80vh;
     border: 2px solid red;
     width: 90vh;
