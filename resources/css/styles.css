@@ -78,6 +78,8 @@ body {
     height: 80vh;
     border: 2px solid red;
     width: 90vh;
+    min-width: 60rem;
+    min-height: 30rem;
 }
 
 .wrapper::-webkit-scrollbar {
@@ -520,16 +522,32 @@ footer {
     border-top: 1px solid #6EC3DF;
     background-color: black;
     color: white;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer p {
+    margin: 0;
+    padding: 1rem;
 }
 
 /* responsive */
 
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {  }
+@media (max-width: 1199.98px) { 
+    .wrapper {
+        position: relative;
+    }
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     
+    .wrapper {
+        position: relative;
+        min-width: unset;
+    }
+
     .top {
         gap: 0.7rem;
     }
@@ -578,6 +596,7 @@ footer {
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:576px) {
+
     .wrapper::-webkit-scrollbar {
         display: none;
     }

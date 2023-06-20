@@ -1,32 +1,19 @@
-// typewriter effect
-async function typeAll() {
-    let texts = document.querySelectorAll('.terminal-middle p');
+// drag and drop functionality
+
+let vsCodeWindow = document.querySelector('.wrapper');
+let topWindow = document.querySelector('.top');
+
+topWindow.addEventListener('mousedown', function (e) {
+    const offsetX = e.clientX - vsCodeWindow.offsetLeft;
+    const offsetY= e.clientY - vsCodeWindow.offsetTop;
     
-    for(let textNode of texts) {
-        let text = textNode.innerText;
-        textNode.style.opacity = 1;
-        textNode.innerHTML = '';
-        await type(textNode, text);
+    const move = e => {
+        vsCodeWindow.style.left = `${e.clientX - offsetX}px`;
+        vsCodeWindow.style.top = `${e.clientY - offsetY}px`;
     }
-}
-
-function type(textNode, text) {
-    return new Promise((resolve, reject) => {
-        let i = 0;
-
-        let typing = setInterval(() => {
-            if (i < text.length) {
-                textNode.innerHTML += text.charAt(i);
-                i++;
-            } else {
-                clearInterval(typing);
-                resolve();
-            }
-        }, 50);
-    });
-}
-
-typeAll();
+    document.addEventListener('mousemove', move);
+    document.addEventListener('mouseup', () => document.removeEventListener('mousemove', move), { once: true });
+});
 
 // add round button 
 window.onload = function() {
@@ -47,16 +34,6 @@ document.querySelector('div.green-dot').addEventListener('click', function() {
     document.querySelector('body').style.width = '100%';
 });
 
-// right click event
-// document.addEventListener('contextmenu', function(ev) {
-//     let wrapper = document.getElementById('editor');
-//     if (!wrapper.contains(ev.target)) {
-//         ev.preventDefault();
-//         alert('success!');
-//         return false;
-//     }
-// }, false);
-
 // when folder is chrome, change icon
 window.addEventListener("DOMContentLoaded", (event) => {
     let chromeFolders = document.querySelectorAll(".folder.chrome img");
@@ -67,7 +44,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
         img.style.height = "6rem";
     });
 });
-
 
 const folders = document.querySelectorAll('.folder');
 
@@ -103,19 +79,32 @@ folders.forEach(folder => {
     });
 });
 
-// drag and drop functionality
-
-let vsCodeWindow = document.querySelector('.wrapper');
-let topWindow = document.querySelector('.top');
-
-topWindow.addEventListener('mousedown', function (e) {
-    const offsetX = e.clientX - vsCodeWindow.offsetLeft;
-    const offsetY= e.clientY - vsCodeWindow.offsetTop;
+// typewriter effect
+async function typeAll() {
+    let texts = document.querySelectorAll('.terminal-middle p');
     
-    const move = e => {
-        vsCodeWindow.style.left = `${e.clientX - offsetX}px`;
-        vsCodeWindow.style.top = `${e.clientY - offsetY}px`;
+    for(let textNode of texts) {
+        let text = textNode.innerText;
+        textNode.style.opacity = 1;
+        textNode.innerHTML = '';
+        await type(textNode, text);
     }
-    document.addEventListener('mousemove', move);
-    document.addEventListener('mouseup', () => document.removeEventListener('mousemove', move), { once: true });
-});
+}
+
+function type(textNode, text) {
+    return new Promise((resolve, reject) => {
+        let i = 0;
+
+        let typing = setInterval(() => {
+            if (i < text.length) {
+                textNode.innerHTML += text.charAt(i);
+                i++;
+            } else {
+                clearInterval(typing);
+                resolve();
+            }
+        }, 50);
+    });
+}
+
+typeAll();
