@@ -460,10 +460,11 @@ main nav li:hover {
 
 .blue-dot {
     display: inline-block;
-    width: 0.9rem;
-    height: 0.9rem;
+    width: 0.7rem;
+    height: 0.7rem;
     margin: 0 0.2rem;
     background-color: rgb(0, 128, 255);
+    border-radius: 0.5rem;
 }
 
 /* output */

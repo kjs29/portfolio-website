@@ -15,7 +15,7 @@ topWindow.addEventListener('mousedown', function (e) {
     document.addEventListener('mouseup', () => document.removeEventListener('mousemove', move), { once: true });
 });
 
-// add round button 
+// add title's text to terminal name
 window.onload = function() {
     const title = document.querySelector('title').innerText;
     let myComputer = document.querySelector('.terminal-command p:last-child');
