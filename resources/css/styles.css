@@ -66,6 +66,19 @@ body {
     gap: 0.5rem;
 }
 
+.folderClicked {
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 0.4rem;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.folderClickedFont {
+    background-color: blue;
+    border: 1px dotted blue;
+    border-radius: 0.2rem;
+}
+
+
 /* .folder:hover {
     filter: brightness(85%);
 } */

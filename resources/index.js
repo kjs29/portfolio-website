@@ -39,8 +39,8 @@ vsCodeWindow.querySelector('div.green-dot').addEventListener('click', function()
     vsCodeWindow.style.top = '0px';
 });
 
-// when folder is chrome, change icon
-window.addEventListener("DOMContentLoaded", (e) => {
+// when folder is chrome, change icon, and resize it
+window.addEventListener("DOMContentLoaded", () => {
     let chromeFolders = document.querySelectorAll(".folder.chrome img");
     
     chromeFolders.forEach((img) => {
@@ -50,43 +50,33 @@ window.addEventListener("DOMContentLoaded", (e) => {
     });
 });
 
+/************** Folder clicking functionality **************/
+
 const folders = document.querySelectorAll('.folder');
 
+// Reset folder's style
 function resetFolderStyles() {
-    folders.forEach(folder=> {
-        folder.firstElementChild.style.backgroundColor = "unset";
-        folder.firstElementChild.style.border = "1.5px solid transparent";
-        folder.lastElementChild.style.color = 'white';
-        folder.lastElementChild.style.border = "1px solid transparent";
-        folder.lastElementChild.style.backgroundColor = "unset";
+    folders.forEach(folder => {
+        folder.firstElementChild.classList.remove('folderClicked');
+        folder.lastElementChild.classList.remove('folderClickedFont');
     });
 }
 
-// when folder is clicked, reset folder style
-document.addEventListener('click', resetFolderStyles);
-
+// Toggle the folder style on click
 folders.forEach(folder => {
     folder.addEventListener('click', e => {
         e.stopPropagation();
-        let folderStyle = window.getComputedStyle(folder);
-        if (folderStyle.filter === "none") {
-            resetFolderStyles();
-            folder.firstElementChild.style.border = "1.5px solid rgba(255,255,255,0.2)";
-            folder.firstElementChild.style.borderRadius = "0.4rem";
-            folder.firstElementChild.style.backgroundColor = "rgba(0,0,0,0.3)";
-            folder.lastElementChild.style.backgroundColor = "blue";
-            folder.lastElementChild.style.color = 'white';
-            folder.lastElementChild.style.border = "1px dotted blue";
-            folder.lastElementChild.style.borderRadius = "0.2rem";
-        } else {
-            resetFolderStyles();
-        }
+        resetFolderStyles();
+        folder.firstElementChild.classList.add('folderClicked');
+        folder.lastElementChild.classList.add('folderClickedFont');
     });
 });
 
+// when My-portfolio folder is double clicked, its display is reset
 document.querySelector('#my-portfolio').addEventListener('dblclick', function() {
     vsCodeWindow.style.display = 'unset';
-})
+});
+/**********************************************************/
 
 // typewriter effect
 async function typeAll() {
