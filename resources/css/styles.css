@@ -101,6 +101,8 @@ body {
     position: fixed;
     min-width: 100%;
     height: 100%;
+    left: 0px !important;
+    top: 0px !important;
 }
 
 .top {

@@ -35,8 +35,6 @@ document.querySelector('div.yellow-dot').addEventListener('click', function() {
 // maximizing window on clicking green-dot
 vsCodeWindow.querySelector('div.green-dot').addEventListener('click', function() {
     vsCodeWindow.classList.toggle ('maxSize');
-    vsCodeWindow.style.left = '0px';
-    vsCodeWindow.style.top = '0px';
 });
 
 // when folder is chrome, change icon, and resize it
