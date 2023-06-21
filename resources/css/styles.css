@@ -62,10 +62,6 @@ body {
     cursor: default;
 }
 
-.chrome {
-    gap: 0.5rem;
-}
-
 .folderClicked {
     border: 1.5px solid rgba(255,255,255,0.2);
     border-radius: 0.4rem;
@@ -77,7 +73,6 @@ body {
     border: 1px dotted blue;
     border-radius: 0.2rem;
 }
-
 
 /* .folder:hover {
     filter: brightness(85%);
@@ -103,7 +98,18 @@ body {
     height: 100%;
     left: 0px !important;
     top: 0px !important;
+    transition: min-width 1s, height 1s, left 0s, top 0.5s;
 }
+
+/* .minimize {
+    transform: perspective(130rem) rotateX(0deg) rotateY(20deg) scale(0.4) translate(50%, 50%);
+    transition: transform 1s;
+    width: 40rem;
+    height: 20rem;
+    bottom: 5rem;
+    right: 5rem;
+    animation: minimize 2s forwards;
+} */
 
 .top {
     display: flex;
@@ -766,3 +772,14 @@ footer p {
         background-color: rgba(110, 195, 223, 1);
     }
 }
+
+
+/* animation */
+
+/* @keyframes minimize {
+    from {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    } to {
+        clip-path: polygon(100% 100%, 100% 100%, 91% 100%, 89% 100%);
+    }
+} */

@@ -24,33 +24,33 @@ window.onload = function() {
 
 // hide code editor on clicking red-dot
 document.querySelector('div.red-dot').addEventListener('click', function() {
+    // vsCodeWindow.classList.add('minimize');
     vsCodeWindow.style.display = 'none';
 });
 
 // hide code editor on clicking yellow-dot
 document.querySelector('div.yellow-dot').addEventListener('click', function() {
+    // vsCodeWindow.classList.add('minimize');
     vsCodeWindow.style.display = 'none';
 });
 
 // maximizing window on clicking green-dot
 vsCodeWindow.querySelector('div.green-dot').addEventListener('click', function() {
-    vsCodeWindow.classList.toggle ('maxSize');
+    vsCodeWindow.classList.toggle('maxSize');
 });
 
-// when folder is chrome, change icon, and resize it
-window.addEventListener("DOMContentLoaded", () => {
-    let chromeFolders = document.querySelectorAll(".folder.chrome img");
-    
-    chromeFolders.forEach((img) => {
-        img.src = "../resources/img/chrome.png";
-        img.style.width = "6rem";
-        img.style.height = "6rem";
-    });
+// maximizing window on doubleclicking top bar
+topWindow.addEventListener('dblclick', function() {
+    vsCodeWindow.classList.toggle('maxSize');
 });
+
+
 
 /************** Folder clicking functionality **************/
 
 const folders = document.querySelectorAll('.folder');
+
+console.log(folders);
 
 // Reset folder's style
 function resetFolderStyles() {
@@ -70,10 +70,13 @@ folders.forEach(folder => {
     });
 });
 
+document.addEventListener('click', resetFolderStyles);
+
 // when My-portfolio folder is double clicked, its display is reset
 document.querySelector('#my-portfolio').addEventListener('dblclick', function() {
     vsCodeWindow.style.display = 'unset';
 });
+
 /**********************************************************/
 
 // typewriter effect
