@@ -494,6 +494,12 @@ main nav li:hover {
     font-weight: 600;
 }
 
+.output img {
+    width: 30rem;
+    height: 25rem;
+    object-fit: cover;
+}
+
 .output ul li{
     padding-bottom: 1rem;
 }
