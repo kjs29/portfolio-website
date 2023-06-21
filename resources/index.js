@@ -117,3 +117,58 @@ function type(textNode, text) {
 }
 
 typeAll();
+
+
+// Select all navigation links
+let navLinkFirst = document.querySelector('nav li:nth-child(1)');
+let navLinkSecond = document.querySelector('nav li:nth-child(2)');
+let navLinkThird = document.querySelector('nav li:nth-child(3)');
+let navLinkFourth = document.querySelector('nav li:nth-child(4)');
+
+navLinkFirst.addEventListener('click', ()=> {
+
+    const targetElement = document.querySelector('#about-me');
+
+    targetElement.scrollIntoView({behavior: 'smooth'});
+
+    navLinkFirst.classList.add('active');
+    navLinkSecond.classList.remove('active');
+    navLinkThird.classList.remove('active');
+    navLinkFourth.classList.remove('active');
+});
+
+navLinkSecond.addEventListener('click', ()=> {
+
+    const targetElement = document.querySelector('#skills');
+
+    targetElement.scrollIntoView({behavior: 'smooth'});
+
+    navLinkFirst.classList.remove('active');
+    navLinkSecond.classList.add('active');
+    navLinkThird.classList.remove('active');
+    navLinkFourth.classList.remove('active');
+});
+
+navLinkThird.addEventListener('click', ()=> {
+
+    const targetElement = document.querySelector('#projects');
+
+    targetElement.scrollIntoView({behavior: 'smooth'});
+    
+    navLinkFirst.classList.remove('active');
+    navLinkSecond.classList.remove('active');
+    navLinkThird.classList.add('active');
+    navLinkFourth.classList.remove('active');
+});
+
+navLinkFourth.addEventListener('click', ()=> {
+
+    const targetElement = document.querySelector('#contact');
+
+    targetElement.scrollIntoView({behavior: 'smooth'});
+
+    navLinkFirst.classList.remove('active');
+    navLinkSecond.classList.remove('active');
+    navLinkThird.classList.remove('active');
+    navLinkFourth.classList.add('active');
+});
