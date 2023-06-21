@@ -375,7 +375,7 @@ main nav li:hover {
 }
 
 .code::-webkit-scrollbar-corner {
-    background: rgb(24, 24, 24);
+    background: rgb(48, 134, 168);
 }
 
 .source-code {
@@ -491,10 +491,29 @@ main nav li:hover {
     font-weight: 600;
 }
 
+.output p.gray {
+    color: gray;
+}
+
 .output img {
-    width: 30rem;
-    height: 25rem;
+    width: 48rem;
+    height: 40rem;
     object-fit: cover;
+}
+
+.output img#about-me-photo {
+    width: 10rem;
+    height: 10rem;
+}
+
+.output img#portfolio-website {
+    width: 48rem;
+    height: 30rem;
+}
+
+.output img#legal-service {
+    width: 48rem;
+    height: 37rem;
 }
 
 .output ul li{
@@ -536,6 +555,17 @@ code {
     white-space: break-spaces;
     background-color: rgba(110, 118, 129, 0.4);
     border-radius: 6px;
+}
+
+.contact-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-icons img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
 }
 
 /* footer */
