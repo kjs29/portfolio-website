@@ -76,7 +76,8 @@ body {
     overflow: auto;
     position: absolute;
     height: 60vh;
-    border: 2px solid red;
+    border: 1px solid #6EC3DF;
+    border-radius: 1.3rem;
     width: 90vh;
     min-width: 60rem;
     min-height: 30rem;
@@ -371,6 +372,10 @@ main nav li:hover {
 
 .code::-webkit-scrollbar-thumb:hover {
     background-color: rgba(110, 195, 223, 1);
+}
+
+.code::-webkit-scrollbar-corner {
+    background: rgb(24, 24, 24);
 }
 
 .source-code {
@@ -699,9 +704,8 @@ footer p {
     .output::-webkit-scrollbar {
         width: 1.8rem;
         background-color: black;
-        border: 1px solid rgb(94, 144, 168);
     }
-
+    
     .output::-webkit-scrollbar-thumb {
         background-color: rgba(110, 195, 223, 0.5);
     }
