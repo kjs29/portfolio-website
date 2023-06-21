@@ -22,6 +22,11 @@ window.onload = function() {
     myComputer.appendChild(document.createTextNode(title+' % '));
 }
 
+// hide code editor on clicking red-dot
+document.querySelector('div.red-dot').addEventListener('click', function() {
+    vsCodeWindow.style.display = 'none';
+});
+
 // hide code editor on clicking yellow-dot
 document.querySelector('div.yellow-dot').addEventListener('click', function() {
     vsCodeWindow.style.display = 'none';
@@ -35,7 +40,7 @@ vsCodeWindow.querySelector('div.green-dot').addEventListener('click', function()
 });
 
 // when folder is chrome, change icon
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", (e) => {
     let chromeFolders = document.querySelectorAll(".folder.chrome img");
     
     chromeFolders.forEach((img) => {
@@ -61,8 +66,8 @@ function resetFolderStyles() {
 document.addEventListener('click', resetFolderStyles);
 
 folders.forEach(folder => {
-    folder.addEventListener('click', event => {
-        event.stopPropagation();
+    folder.addEventListener('click', e => {
+        e.stopPropagation();
         let folderStyle = window.getComputedStyle(folder);
         if (folderStyle.filter === "none") {
             resetFolderStyles();
