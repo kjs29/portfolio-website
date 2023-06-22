@@ -450,10 +450,21 @@ main nav li:hover {
     white-space: nowrap;
 }
 
+.source-code:hover {
+    cursor: text;
+}
+
 .source-code p {
     margin: 0;
     padding: 0;
+    border: 1px solid transparent;
 }
+
+.source-code p:hover {
+    border-top: 1px dotted rgb(223, 128, 45);
+    border-bottom: 1px dotted rgb(223, 128, 45);
+}
+
 
 .source-code *:before {
     counter-increment: line;
@@ -475,6 +486,10 @@ main nav li:hover {
 /* select 100th and all following elements */
 .source-code p:nth-child(n+100):before {
     margin-right: 1rem;
+}
+
+.source-code > p:hover::before {
+    color: rgb(223, 128, 45);
 }
 
 /* terminal */
