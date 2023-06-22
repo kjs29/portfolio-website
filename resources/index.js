@@ -53,10 +53,10 @@ let disableContextMenu = e => {
     let left = e.clientX;
     let right = e.clientY;
 
-    let xxx = document.getElementById('xxx');
-    xxx.innerText = `${left} / ${right}`;
-    xxx.style.position = 'absolute';
-    xxx.style.top = 0;
+    // let xxx = document.getElementById('xxx');
+    // xxx.innerText = `${left} / ${right}`;
+    // xxx.style.position = 'absolute';
+    // xxx.style.top = 0;
     rightClickMenu.style.display= 'block';
     rightClickMenu.style.left = left + 'px';
     rightClickMenu.style.top = right + 'px';
