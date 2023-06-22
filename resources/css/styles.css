@@ -562,24 +562,14 @@ main nav li:hover {
 }
 
 .output img {
-    width: 48rem;
-    height: 40rem;
     object-fit: cover;
+    width: 48rem;
+    height: fit-content;
 }
 
 .output img#about-me-photo {
     width: 10rem;
     height: 10rem;
-}
-
-.output img#portfolio-website {
-    width: 48rem;
-    height: 30rem;
-}
-
-.output img#legal-service {
-    width: 48rem;
-    height: 37rem;
 }
 
 .output ul li{
@@ -737,6 +727,11 @@ footer p {
 
     .output {
         font-size: 1.2rem;
+    }
+
+    .output #projects img {
+        width: 100%;
+        height: fit-content;
     }
 
 }
