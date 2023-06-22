@@ -72,27 +72,6 @@ document.addEventListener('click', function(e) {
     rightClickMenu.style.display = 'none';
 });
 
-// // right click controls
-// let rightClickMenu = document.getElementById('rightClickMenu');
-
-// document.addEventListener('contextmenu', function(e) {
-//     e.preventDefault();
-
-//     // Position the context menu at the right-click position
-//     rightClickMenu.style.left = e.clientX + 'px';
-//     rightClickMenu.style.top = e.clientY + 'px';
-//     rightClickMenu.style.border = '5px solid red';
-    
-//     // Display the right-click coordinates
-//     let xxx = document.getElementById('xxx');
-//     xxx.innerText = `${e.clientX} / ${e.clientY}`;
-//     xxx.style.position = 'absolute';
-//     xxx.style.top = 0;
-    
-//     return false;
-// });
-
-
 /************** Folder clicking functionality **************/
 
 const folders = document.querySelectorAll('.folder');
