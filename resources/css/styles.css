@@ -572,6 +572,11 @@ main nav li:hover {
     height: 10rem;
 }
 
+.output #projects img {
+    width: 100%;
+    max-width: 48rem;
+}
+
 .output ul li{
     padding-bottom: 1rem;
 }
@@ -630,10 +635,6 @@ main nav li:hover {
     background-color: rgb(48, 134, 168);
 }
 
-.output #supertext {
-    font-size: 1.2rem;
-    color: gray;
-}
 
 code {
     padding: 0.3rem 0.4rem;
@@ -653,6 +654,12 @@ code {
     width: 5rem;
     height: 5rem;
     object-fit: cover;
+}
+
+.output #supertext {
+    font-size: 1.2rem;
+    color: gray;
+    border-top: 1px solid gray;
 }
 
 /* footer */
