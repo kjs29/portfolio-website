@@ -138,6 +138,7 @@ typeAll();
 let rightClickMenuAboutMe = document.querySelector('.menu-container p:nth-child(1)');
 let rightClickMenuSkills = document.querySelector('.menu-container p:nth-child(2)');
 let rightClickMenuProjects = document.querySelector('.menu-container p:nth-child(3)');
+let rightClickMenuContact = document.querySelector('.menu-container p:nth-child(4)');
 let rightClickMenuDisableMenu = document.querySelector('.menu-container p:last-child');
 
 let navLinkFirst = document.querySelector('nav li:nth-child(1)');
@@ -161,6 +162,10 @@ rightClickMenuProjects.addEventListener('click', () => {
     scrollToProjects();
 });
 
+rightClickMenuContact.addEventListener('click', () => {
+    scrollToContact();
+})
+
 navLinkFirst.addEventListener('click', () => {
     scrollToAboutMe();
 });
@@ -174,13 +179,7 @@ navLinkThird.addEventListener('click', ()=> {
 });
 
 navLinkFourth.addEventListener('click', ()=> {
-    const targetElement = document.querySelector('#contact');
-    targetElement.scrollIntoView({behavior: 'smooth'});
-
-    navLinkFirst.classList.remove('active');
-    navLinkSecond.classList.remove('active');
-    navLinkThird.classList.remove('active');
-    navLinkFourth.classList.add('active');
+    scrollToContact();
 });
 
 function scrollToAboutMe() {
@@ -198,6 +197,11 @@ function scrollToProjects() {
     targetElement.scrollIntoView({behavior: 'smooth'});
 }
 
+function scrollToContact() {
+    const targetElement = document.querySelector('#contact');
+    targetElement.scrollIntoView({behavior: 'smooth'});
+}
+
 // change active class as page scrolls
 let navigationMenu = document.querySelectorAll('nav ul li');
 let output = document.querySelector('.output');
@@ -212,7 +216,7 @@ output.addEventListener('scroll', function(e) {
     introSection = Array.from(sections).shift();
     sections = Array.from(sections).slice(1);
     
-    console.log(`scroll position : ${scrollPositionY}`);
+    // console.log(`scroll position : ${scrollPositionY}`);
     
     if (scrollPositionY < sections[1].offsetTop) {
         navigationMenu[0].classList.add('active');

@@ -58,10 +58,6 @@ body {
     cursor: pointer;
 }
 
-.menu-container p:nth-child(4):hover {
-    cursor: default;
-}
-
 #menu-contact img {
     width: 3rem;
     height: 3rem;
