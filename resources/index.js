@@ -186,36 +186,57 @@ navLinkFourth.addEventListener('click', ()=> {
 function scrollToAboutMe() {
     const targetElement = document.querySelector('#about-me');
     targetElement.scrollIntoView({behavior: 'smooth'});
-    
-    navLinkFirst.classList.add('active');
-    navLinkSecond.classList.remove('active');
-    navLinkThird.classList.remove('active');
-    navLinkFourth.classList.remove('active');
 }
 
 function scrollToSkills() {
     const targetElement = document.querySelector('#skills');
     targetElement.scrollIntoView({behavior: 'smooth'});
-    
-    navLinkFirst.classList.remove('active');
-    navLinkSecond.classList.add('active');
-    navLinkThird.classList.remove('active');
-    navLinkFourth.classList.remove('active');
 }
 
 function scrollToProjects() {
     const targetElement = document.querySelector('#projects');
     targetElement.scrollIntoView({behavior: 'smooth'});
-    
-    navLinkFirst.classList.remove('active');
-    navLinkSecond.classList.remove('active');
-    navLinkThird.classList.add('active');
-    navLinkFourth.classList.remove('active');
 }
 
 // change active class as page scrolls
+let navigationMenu = document.querySelectorAll('nav ul li');
 let output = document.querySelector('.output');
+
 output.addEventListener('scroll', function(e) {
-    let fromTop = output.scrollY;
-    // xxx.innerText = fromTop;
+    
+    // the very top default scrollPosition is 10
+    let scrollPositionY = output.scrollTop + 10;
+    
+    // select first child, and select from 2nd to 5th children of .output
+    let sections = output.querySelectorAll('.output > div');
+    introSection = Array.from(sections).shift();
+    sections = Array.from(sections).slice(1);
+    
+    console.log(`scroll position : ${scrollPositionY}`);
+    
+    if (scrollPositionY < sections[1].offsetTop) {
+        navigationMenu[0].classList.add('active');
+    } else {
+        navigationMenu[0].classList.remove('active')
+    }
+
+    if (scrollPositionY > sections[1].offsetTop && 
+        scrollPositionY < sections[2].offsetTop) {
+        navigationMenu[1].classList.add('active');
+    } else {
+        navigationMenu[1].classList.remove('active');
+    }
+
+    if (scrollPositionY > sections[2].offsetTop &&
+        scrollPositionY < sections[3].offsetTop - output.offsetHeight) {
+        navigationMenu[2].classList.add('active');
+    } else {
+        navigationMenu[2].classList.remove('active');
+    }
+    
+    if (scrollPositionY > sections[3].offsetTop - output.offsetHeight) {
+        navigationMenu[3].classList.add('active');
+    } else {
+        navigationMenu[3].classList.remove('active');
+    }
 });

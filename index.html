@@ -48,7 +48,7 @@
     <main>
       <nav>
         <ul>
-          <li class="active tooltip"><a href="" class="about-me">about me</a></li>
+          <li class="tooltip active"><a href="" class="about-me">about me</a></li>
           <li class="tooltip"><a href="#" class="skills">skills</a></li>
           <li class="tooltip"><a href="#" class="projects">projects</a></li>
           <li class="tooltip"><a href="#" class="contact">contact me</a></li>
@@ -181,84 +181,94 @@
       </div>
 
       <div class="output">
-        <h1>My Portfolio Website</h1>
-        <p>Welcome to My Portfolio Website!</p>
-        <h2 id="about-me" tabindex="1">About me</h2>
-        <img src="./resources/img/me.jpeg" alt="a photo of me" id="about-me-photo">
-        <p>Hi there, my name is Jinsung Kim, a curious software developer.</p>
-        <p class="quote">"People don't care about what you say, they care about what you build." - Mark Zuckerberg</p>
-        <p>It is motivating that learning how to program opens doors to connect myself with the world. Although I have yet to create a service that reaches millions, every day I am taking one step closer to achieving my goal.</p>
-        <p>My passion extends beyond simply coding; I deeply enjoy the full process of conceptualizing, designing, building, and improving applications.</p>
-        <p class="quote">"Everything that We (developers) are doing should flow for user values" - John Carmack</p>
-        <p>As a software engineer, I view myself as a problem solver first and foremost. I firmly believe that the best developers don't just code—they create thoughtful, innovative solutions that can make a significant impact on the world. That's precisely what I strive to do every day.</p>
-        <p>Feel free to explore my work, learn about my skills, and get in touch. I look forward to connecting with you!</p>
-        <p>More quotes I like</p>
-        <p class="quote">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler</p>
-        <p class="quote">"A journey of a thousand miles begins with a single step" - Chinese proverb</p>
-        <h2 id="skills"  tabindex="2">Skills</h2>
-        <p>Frontend</p>
-        <ul>
-          <li>HTML / CSS</li>
-          <li>JavaScript</li>
-          <li>Sass</li>
-          <li>Bootstrap</li>
-        </ul>
-        <p>Backend</p>
-        <ul>
-          <li>Python / Django</li>
-          <li>Java</li>
-          <li>PostgreSQL</li>
-        </ul>
-        <details tabindex="-1">
-          <summary>Random skills</summary>
+        <div id="intro">
+          <h1>My Portfolio Website</h1>
+          <p>Welcome to My Portfolio Website!</p>
+        </div>
+        <div id="about-me" tabindex="1">
+          <h2>About me</h2>
+          <img src="./resources/img/me.jpeg" alt="a photo of me" id="about-me-photo">
+          <p>Hi there, my name is Jinsung Kim, a curious software developer.</p>
+          <p class="quote">"People don't care about what you say, they care about what you build." - Mark Zuckerberg</p>
+          <p>It is motivating that learning how to program opens doors to connect myself with the world. Although I have yet to create a service that reaches millions, every day I am taking one step closer to achieving my goal.</p>
+          <p>My passion extends beyond simply coding; I deeply enjoy the full process of conceptualizing, designing, building, and improving applications.</p>
+          <p class="quote">"Everything that We (developers) are doing should flow for user values" - John Carmack</p>
+          <p>As a software engineer, I view myself as a problem solver first and foremost. I firmly believe that the best developers don't just code—they create thoughtful, innovative solutions that can make a significant impact on the world. That's precisely what I strive to do every day.</p>
+          <p>Feel free to explore my work, learn about my skills, and get in touch. I look forward to connecting with you!</p>
+          <p>More quotes I like</p>
+          <p class="quote">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler</p>
+          <p class="quote">"A journey of a thousand miles begins with a single step" - Chinese proverb</p>
+        </div>
+        <div id="skills" tabindex="2">
+          <h2>Skills</h2>
+          <p>Frontend</p>
           <ul>
-            <li>Korean (native)</li>
-            <li>Piano <sup><a href="#supertext">[1]</a></sup></li>
-            <li>Pen / Book spin</li>
-            <li>Communication</li>
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>Sass</li>
+            <li>Bootstrap</li>
           </ul>
-        </details>
-        <h2 id="projects"  tabindex="3">Projects</h2>
-        <h3>1. Dual N back | Python | <a href="https://github.com/kjs29/dual_nback" target="_blank">Download & Code</a></h3>
-        <a href="https://youtu.be/WJlfGpfGcow/" title="Click to watch a description video on Youtube" target="_blank"><img src="./resources/img/dualnback.jpg" alt="dual n back game screenshot"></a>
-        <p class="gray"><i>Participated and won $50 in <a href="https://devpost.com/software/n-back" target="_blank">Pygames Hackathon</a> by Microsoft</i></p>
-        <p>This project was made after 'N back task' which helps improve working memory and cognitive ability.</p>
-        <ul>
-          <li>I had lots of fun building the game. While tutorials can provide a foundation, this project underscored the idea that true learning comes through application. It also boosted my confidence in programming.</li>
-          <li>Besides improving my problem-solving skills, I acquired experience in various aspects of game development, including implementing pause/resume functionalities, and stop watch-style time controls within the game loop.</li>
-          <li>I gained an experience in object oriented programming in Python, and why object oriented programming is suitable for complex codes.</li>
-          <li>As the codes get more complex, I came to deeply think about writing scalable, readable, and clean codes.</li>
-        </ul>
-        <h3>2. Portfolio website | HTML, CSS, JavaScript | <a href="#" target="_blank">Live</a> | <a href="https://github.com/kjs29/portfolio-website/" target="_blank">Code</a></h3>
-        <p>It is a website for portfolio purpose. It is the current website you are looking at. The website which models after the MacOS environment is made with HTML, CSS, and vanilla JavaScript.</p>
-        <a href="#"><img id="portfolio-website" src="./resources/img/portfoliowebsite.png" alt="portfolio website screenshot"></a>
-        <ul>
-          <li>I strengthened my frontend skills, especially responsive design and Flexbox in CSS, and JavaScript Document Object Model(DOM) within Web API.</li>
-          <li>I learned and implemented good practices such as</li> 
+          <p>Backend</p>
+          <ul>
+            <li>Python / Django</li>
+            <li>Java</li>
+            <li>PostgreSQL</li>
+          </ul>
+          <details tabindex="-1">
+            <summary>Random skills</summary>
             <ul>
-              <li>Avoid global queries, as <code>document.getElementById()</code> traverses the entire DOM tree.</li>
-              <li>Manipulating classes for styles instead of adding inline styles. This helps with performance, readability, and maintainability.</li>
+              <li>Korean (native)</li>
+              <li>Piano <sup><a href="#supertext">[1]</a></sup></li>
+              <li>Pen / Book spin</li>
+              <li>Communication</li>
             </ul>
-        </ul>
-        <h3>3. Legal service website | HTML, Bootstrap, Django, PythonAnywhere | <a href="https://www.calgarymobilewills.ca/" target="_blank">Live</a> | <a href="https://github.com/kjs29/willservice/" target="_blank">Code</a></h3>
-        <a href="https://www.calgarymobilewills.ca/" target="_blank"><img src="./resources/img/legalservice.png" alt="legal service website screenshot" id="legal-service"></a>
-        <p>This website was made for side-business with my friend.</p>
-        <ul>
-          <li>This website is a web application where I implemented both frontend and backend with Django.</li>
-          <li>I developed a Django form that sends a PDF document file to clients' emails after they have completed the form.</li>
-          <li>I gained experience in deploying to PythonAnywhere.com, and also learned about SEO.</li>
-        </ul>
-        <hr>
-        <div id="supertext">
-          <p>1. <a href="https://youtu.be/v5quT3trWvE/" target="_blank">https://youtu.be/v5quT3trWvE</a></p>
+          </details>
         </div>
-        <h2 id="contact">Contact</h2>
-        <div class="contact-icons">
-          <a href="https://github.com/kjs29/" target="_blank"><img src="./resources/img/github.png" alt="github logo"></a>
-          <a href="mailto:jsk.jinsung@gmail.com" target="_blank"><img src="./resources/img/gmail.png" alt="gmail logo"></a>
-          <a href="https://linkedin.com/in/jinsungk/" target="_blank"><img src="./resources/img/linkedin.png" alt=""></a>
+        <div id="projects"  tabindex="3">
+          <h2>Projects</h2>
+          <h3>1. Dual N back | Python | <a href="https://github.com/kjs29/dual_nback" target="_blank">Download & Code</a></h3>
+          <a href="https://youtu.be/WJlfGpfGcow/" title="Click to watch a description video on Youtube" target="_blank"><img src="./resources/img/dualnback.jpg" alt="dual n back game screenshot"></a>
+          <p class="gray"><i>Participated and won $50 in <a href="https://devpost.com/software/n-back" target="_blank">Pygames Hackathon</a> by Microsoft</i></p>
+          <p>This project was made after 'N back task' which helps improve working memory and cognitive ability.</p>
+          <ul>
+            <li>I had lots of fun building the game. While tutorials can provide a foundation, this project underscored the idea that true learning comes through application. It also boosted my confidence in programming.</li>
+            <li>Besides improving my problem-solving skills, I acquired experience in various aspects of game development, including implementing pause/resume functionalities, and stop watch-style time controls within the game loop.</li>
+            <li>I gained an experience in object oriented programming in Python, and why object oriented programming is suitable for complex codes.</li>
+            <li>As the codes get more complex, I came to deeply think about writing scalable, readable, and clean codes.</li>
+          </ul>
+          <h3>2. Portfolio website | HTML, CSS, JavaScript | <a href="#" target="_blank">Live</a> | <a href="https://github.com/kjs29/portfolio-website/" target="_blank">Code</a></h3>
+          <p>It is a website for portfolio purpose. It is the current website you are looking at. The website which models after the MacOS environment is made with HTML, CSS, and vanilla JavaScript.</p>
+          <a href="#"><img id="portfolio-website" src="./resources/img/portfoliowebsite.png" alt="portfolio website screenshot"></a>
+          <ul>
+            <li>I strengthened my frontend skills, especially responsive design and Flexbox in CSS, and JavaScript Document Object Model(DOM) within Web API.</li>
+            <li>I learned and implemented good practices such as</li> 
+              <ul>
+                <li>Avoid global queries, as <code>document.getElementById()</code> traverses the entire DOM tree.</li>
+                <li>Manipulating classes for styles instead of adding inline styles. This helps with performance, readability, and maintainability.</li>
+              </ul>
+          </ul>
+          <h3>3. Legal service website | HTML, Bootstrap, Django, PythonAnywhere | <a href="https://www.calgarymobilewills.ca/" target="_blank">Live</a> | <a href="https://github.com/kjs29/willservice/" target="_blank">Code</a></h3>
+          <a href="https://www.calgarymobilewills.ca/" target="_blank"><img src="./resources/img/legalservice.png" alt="legal service website screenshot" id="legal-service"></a>
+          <p>This website was made for side-business with my friend.</p>
+          <ul>
+            <li>This website is a web application where I implemented both frontend and backend with Django.</li>
+            <li>I developed a Django form that sends a PDF document file to clients' emails after they have completed the form.</li>
+            <li>I gained experience in deploying to PythonAnywhere.com, and also learned about SEO.</li>
+          </ul>
+          <hr>
+          <div id="supertext">
+            <p>1. <a href="https://youtu.be/v5quT3trWvE/" target="_blank">https://youtu.be/v5quT3trWvE</a></p>
+          </div>
         </div>
-        <p>Thank you for visiting my website, please contact me and I will be happy to talk with you! 😊</p>
+        <div id="contact">
+          <h2 id="contact">Contact</h2>
+          <div class="contact-icons">
+            <a href="https://github.com/kjs29/" target="_blank"><img src="./resources/img/github.png" alt="github logo"></a>
+            <a href="mailto:jsk.jinsung@gmail.com" target="_blank"><img src="./resources/img/gmail.png" alt="gmail logo"></a>
+            <a href="https://linkedin.com/in/jinsungk/" target="_blank"><img src="./resources/img/linkedin.png" alt=""></a>
+          </div>
+          <p>Thank you for visiting my website, please contact me and I will be happy to talk with you! 😊</p>
+        </div>
       </div>
 
     </main>
