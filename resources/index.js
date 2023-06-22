@@ -44,13 +44,58 @@ topWindow.addEventListener('dblclick', function() {
     vsCodeWindow.classList.toggle('maxSize');
 });
 
+// right click controls
+let rightClickMenu = document.getElementById('rightClickMenu');
+
+let disableContextMenu = e => {
+    e.preventDefault();
+    
+    let left = e.clientX;
+    let right = e.clientY;
+
+    let xxx = document.getElementById('xxx');
+    xxx.innerText = `${left} / ${right}`;
+    xxx.style.position = 'absolute';
+    xxx.style.top = 0;
+    rightClickMenu.style.display= 'block';
+    rightClickMenu.style.left = left + 'px';
+    rightClickMenu.style.top = right + 'px';
+    rightClickMenu.style.border = '5px solid red;'
+    rightClickMenu.style.visibility = 'visible';
+    
+    return false;
+}
+
+document.addEventListener('contextmenu', disableContextMenu);
+
+document.addEventListener('click', function(e) {
+    rightClickMenu.style.display = 'none';
+});
+
+// // right click controls
+// let rightClickMenu = document.getElementById('rightClickMenu');
+
+// document.addEventListener('contextmenu', function(e) {
+//     e.preventDefault();
+
+//     // Position the context menu at the right-click position
+//     rightClickMenu.style.left = e.clientX + 'px';
+//     rightClickMenu.style.top = e.clientY + 'px';
+//     rightClickMenu.style.border = '5px solid red';
+    
+//     // Display the right-click coordinates
+//     let xxx = document.getElementById('xxx');
+//     xxx.innerText = `${e.clientX} / ${e.clientY}`;
+//     xxx.style.position = 'absolute';
+//     xxx.style.top = 0;
+    
+//     return false;
+// });
 
 
 /************** Folder clicking functionality **************/
 
 const folders = document.querySelectorAll('.folder');
-
-console.log(folders);
 
 // Reset folder's style
 function resetFolderStyles() {
@@ -111,55 +156,87 @@ typeAll();
 
 
 // Select all navigation links
+let rightClickMenuAboutMe = document.querySelector('.menu-container p:nth-child(1)');
+let rightClickMenuSkills = document.querySelector('.menu-container p:nth-child(2)');
+let rightClickMenuProjects = document.querySelector('.menu-container p:nth-child(3)');
+let rightClickMenuDisableMenu = document.querySelector('.menu-container p:last-child');
+
 let navLinkFirst = document.querySelector('nav li:nth-child(1)');
 let navLinkSecond = document.querySelector('nav li:nth-child(2)');
 let navLinkThird = document.querySelector('nav li:nth-child(3)');
 let navLinkFourth = document.querySelector('nav li:nth-child(4)');
 
-navLinkFirst.addEventListener('click', ()=> {
-
-    const targetElement = document.querySelector('#about-me');
-
-    targetElement.scrollIntoView({behavior: 'smooth'});
-
-    navLinkFirst.classList.add('active');
-    navLinkSecond.classList.remove('active');
-    navLinkThird.classList.remove('active');
-    navLinkFourth.classList.remove('active');
+rightClickMenuDisableMenu.addEventListener('click', () => {
+    document.removeEventListener('contextmenu', disableContextMenu);
 });
 
-navLinkSecond.addEventListener('click', ()=> {
+rightClickMenuAboutMe.addEventListener('click', () => {
+    scrollToAboutMe();
+});
 
-    const targetElement = document.querySelector('#skills');
+rightClickMenuSkills.addEventListener('click', () => {
+    scrollToSkills();
+});
 
-    targetElement.scrollIntoView({behavior: 'smooth'});
+rightClickMenuProjects.addEventListener('click', () => {
+    scrollToProjects();
+});
 
-    navLinkFirst.classList.remove('active');
-    navLinkSecond.classList.add('active');
-    navLinkThird.classList.remove('active');
-    navLinkFourth.classList.remove('active');
+navLinkFirst.addEventListener('click', () => {
+    scrollToAboutMe();
+});
+
+navLinkSecond.addEventListener('click', () => {
+    scrollToSkills();
 });
 
 navLinkThird.addEventListener('click', ()=> {
-
-    const targetElement = document.querySelector('#projects');
-
-    targetElement.scrollIntoView({behavior: 'smooth'});
-    
-    navLinkFirst.classList.remove('active');
-    navLinkSecond.classList.remove('active');
-    navLinkThird.classList.add('active');
-    navLinkFourth.classList.remove('active');
+    scrollToProjects();
 });
 
 navLinkFourth.addEventListener('click', ()=> {
-
     const targetElement = document.querySelector('#contact');
-
     targetElement.scrollIntoView({behavior: 'smooth'});
 
     navLinkFirst.classList.remove('active');
     navLinkSecond.classList.remove('active');
     navLinkThird.classList.remove('active');
     navLinkFourth.classList.add('active');
+});
+
+function scrollToAboutMe() {
+    const targetElement = document.querySelector('#about-me');
+    targetElement.scrollIntoView({behavior: 'smooth'});
+    
+    navLinkFirst.classList.add('active');
+    navLinkSecond.classList.remove('active');
+    navLinkThird.classList.remove('active');
+    navLinkFourth.classList.remove('active');
+}
+
+function scrollToSkills() {
+    const targetElement = document.querySelector('#skills');
+    targetElement.scrollIntoView({behavior: 'smooth'});
+    
+    navLinkFirst.classList.remove('active');
+    navLinkSecond.classList.add('active');
+    navLinkThird.classList.remove('active');
+    navLinkFourth.classList.remove('active');
+}
+
+function scrollToProjects() {
+    const targetElement = document.querySelector('#projects');
+    targetElement.scrollIntoView({behavior: 'smooth'});
+    
+    navLinkFirst.classList.remove('active');
+    navLinkSecond.classList.remove('active');
+    navLinkThird.classList.add('active');
+    navLinkFourth.classList.remove('active');
+}
+
+// change active class as page scrolls
+let output = document.querySelector('.output');
+output.addEventListener('scroll', function(e) {
+    let fromTop = output.scrollY;
+    // xxx.innerText = fromTop;
 });
