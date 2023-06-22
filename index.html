@@ -168,7 +168,7 @@
       <div class="output">
         <h1>My Portfolio Website</h1>
         <p>Welcome to My Portfolio Website!</p>
-        <h2 id="about-me">About me</h2>
+        <h2 id="about-me" tabindex="1">About me</h2>
         <img src="./resources/img/me.jpeg" alt="a photo of me" id="about-me-photo">
         <p>Hi there, my name is Jinsung Kim, a curious software developer.</p>
         <p class="quote">"People don't care about what you say, they care about what you build." - Mark Zuckerberg</p>
@@ -180,7 +180,7 @@
         <p>More quotes I like</p>
         <p class="quote">"Any fool can write code that a computer can understand. Good programmers write code that humans can understand." - Martin Fowler</p>
         <p class="quote">"A journey of a thousand miles begins with a single step" - Chinese proverb</p>
-        <h2 id="skills">Skills</h2>
+        <h2 id="skills"  tabindex="2">Skills</h2>
         <p>Frontend</p>
         <ul>
           <li>HTML / CSS</li>
@@ -194,16 +194,16 @@
           <li>Java</li>
           <li>PostgreSQL</li>
         </ul>
-        <details>
+        <details tabindex="-1">
           <summary>Random skills</summary>
           <ul>
             <li>Korean (native)</li>
-            <li>Piano (Was forced to learn as a kid, like any other korean kid)</li>
-            <li>Pen / Book spin (focused on spinning things instead of studying at school)</li>
+            <li>Piano <sup><a href="#supertext">[1]</a></sup></li>
+            <li>Pen / Book spin</li>
             <li>Communication</li>
           </ul>
         </details>
-        <h2 id="projects">Projects</h2>
+        <h2 id="projects"  tabindex="3">Projects</h2>
         <h3>1. Dual N back | Python | <a href="https://github.com/kjs29/dual_nback" target="_blank">Download & Code</a></h3>
         <a href="https://youtu.be/WJlfGpfGcow/" title="Click to watch a description video on Youtube" target="_blank"><img src="./resources/img/dualnback.jpg" alt="dual n back game screenshot"></a>
         <p class="gray"><i>Participated and won $50 in <a href="https://devpost.com/software/n-back" target="_blank">Pygames Hackathon</a> by Microsoft</i></p>
@@ -214,7 +214,7 @@
           <li>I gained an experience in object oriented programming in Python, and why object oriented programming is suitable for complex codes.</li>
           <li>As the codes get more complex, I came to deeply think about writing scalable, readable, and clean codes.</li>
         </ul>
-        <h3>2. Portfolio website | HTML, CSS, JavaScript | <a href="#">Live</a> | <a href="https://github.com/kjs29/portfolio-website/" target="_blank">Code</a></h3>
+        <h3>2. Portfolio website | HTML, CSS, JavaScript | <a href="#" target="_blank">Live</a> | <a href="https://github.com/kjs29/portfolio-website/" target="_blank">Code</a></h3>
         <p>It is a website for portfolio purpose. It is the current website you are looking at. The website which models after the MacOS environment is made with HTML, CSS, and vanilla JavaScript.</p>
         <a href="#"><img id="portfolio-website" src="./resources/img/portfoliowebsite.png" alt="portfolio website screenshot"></a>
         <ul>
@@ -233,6 +233,10 @@
           <li>I developed a Django form that sends a PDF document file to clients' emails after they have completed the form.</li>
           <li>I gained experience in deploying to PythonAnywhere.com, and also learned about SEO.</li>
         </ul>
+        <hr>
+        <div id="supertext">
+          <p>1. <a href="https://youtu.be/v5quT3trWvE/" target="_blank">https://youtu.be/v5quT3trWvE</a></p>
+        </div>
 
 
         <h2 id="contact">Contact</h2>
