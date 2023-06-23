@@ -837,7 +837,7 @@ footer p {
     .maxSize {
         margin: 0;
         position: fixed;
-        height: 100vh;
+        height: auto;
         left: 0px !important;
         top: 0rem !important;
         transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
