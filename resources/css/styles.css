@@ -783,6 +783,7 @@ footer p {
         width: 100%;
         position: fixed;
         top: 5rem;
+        background-color: black;
     }
     
     .top {
@@ -850,6 +851,7 @@ footer p {
     nav {
         width: 100%;
         height:4rem;
+        border-right: none;
     }
 
     main nav ul {
@@ -904,7 +906,7 @@ footer p {
         width: 100%;
         overflow-y: scroll;
         font-size: 1.7rem;
-        margin-bottom: 3rem;
+        border-left: none;
     }
 
     .output::-webkit-scrollbar {
@@ -921,11 +923,7 @@ footer p {
     }
 
     footer {
-        height: 3rem;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
+        display: none;
     }
 }
 
