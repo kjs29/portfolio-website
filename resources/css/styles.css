@@ -763,38 +763,43 @@ footer p {
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:576px) {
-
     
     body {
         margin: 0;
         width:100%;
         align-items: unset;
+        border: 3px solid greenyellow;
     }
 
     .wrapper {
-        height:80%;
+        margin: 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
     }
     
-    .wrapper::-webkit-scrollbar {
-        display: none;
-    }
-
     .top {
         height: 5rem;
         gap: 0.3rem;
     }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        align-self: center;
+    }
+
+    .wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
     
     .top [class*="dot"] {
         width: 3rem;
         height: 3rem;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        align-self: center;
-    }
 
     nav {
         width: 100%;
