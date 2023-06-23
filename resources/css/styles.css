@@ -426,7 +426,7 @@ main nav li:hover {
     flex-direction: column;
     padding-left: 0.5rem;
     background-color: black;
-    color: white;
+    color: rgb(239, 239, 239);
 }
 
 .code::-webkit-scrollbar {
@@ -556,7 +556,7 @@ main nav li:hover {
     line-height: 1.5;
     padding: 0 2rem;
     background-color: black;
-    color: white;
+    color: rgb(239, 239, 239);
     border-left: 1px solid #6EC3DF;
     word-wrap: break-word;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
@@ -793,7 +793,7 @@ footer p {
         position: absolute;
         top:0;
     }
-
+    
     .top [class*="dot"] {
         width: 3rem;
         height: 3rem;
@@ -817,7 +817,7 @@ footer p {
         border-bottom: 8px solid transparent;
         border-left: 8px solid rgb(38, 86, 20);
     }
-
+    
     .top .green-dot::after {
         top: 7.5px;
         left: 7.7px;
@@ -843,17 +843,17 @@ footer p {
         top: 0rem !important;
         transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
     }
-
+    
     .wrapper::-webkit-scrollbar {
         display: none;
     }
-
+    
     nav {
         width: 100%;
         height:4rem;
         border-right: none;
     }
-
+    
     main nav ul {
         height:4rem;
         display: flex;
@@ -886,7 +886,7 @@ footer p {
     .tooltip::after, .tooltip::before {
         display: none;
     }
-
+    
     main nav a {
         display: block;
         visibility: visible;
@@ -901,12 +901,14 @@ footer p {
     .left {
         display: none;
     }
-
+    
     .output {
         width: 100%;
         overflow-y: scroll;
         font-size: 1.7rem;
         border-left: none;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(239, 239, 239);
     }
 
     .output::-webkit-scrollbar {
