@@ -859,6 +859,8 @@ footer p {
 
     .output #projects img {
         width: 25rem;
+        height: 15rem;
+        object-fit: cover;
     }
 
     .output::-webkit-scrollbar {
