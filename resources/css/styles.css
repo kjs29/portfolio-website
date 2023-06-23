@@ -860,6 +860,7 @@ footer p {
     .output #projects img {
         width: 100%;
         height: fit-content;
+        object-fit: cover;
     }
 
     .output::-webkit-scrollbar {
