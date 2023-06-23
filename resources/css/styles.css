@@ -766,7 +766,7 @@ footer p {
 @media (max-width:576px) {
     
     body {
-        margin: 0 0 3.5rem 0;
+        margin: 0;
         width:100%;
         align-items: unset;
         height: 80vh;
@@ -776,8 +776,6 @@ footer p {
     }
     
     .wrapper {
-        /* margin-top: 4rem; */
-        /* height: 50rem; */
         display: flex;
         flex-direction: column;
         width: 100%;
