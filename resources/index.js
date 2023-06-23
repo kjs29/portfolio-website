@@ -208,47 +208,46 @@ let output = document.querySelector('.output');
 
 output.addEventListener('scroll', () => {
     
-    if (window.innerWidth <= 576) {
-        return false;
-    }
-
-    // the very top default scrollPosition is 10
-    let scrollPositionY = output.scrollTop + 10;
+    if (window.innerWidth > 576) {
+        // the very top default scrollPosition is 10
+        let scrollPositionY = output.scrollTop + 10;
+        
+        // select first child, and select from 2nd to 5th children of .output
+        let sections = output.querySelectorAll('.output > div');
+        introSection = Array.from(sections).shift();
+        sections = Array.from(sections).slice(1);
+        
+        // console.log(`scroll position : ${scrollPositionY}`);
     
-    // select first child, and select from 2nd to 5th children of .output
-    let sections = output.querySelectorAll('.output > div');
-    introSection = Array.from(sections).shift();
-    sections = Array.from(sections).slice(1);
+        // add class active to about me section
+        if (scrollPositionY < sections[1].offsetTop) {
+            navigationMenu[0].classList.add('active');
+        } else {
+            navigationMenu[0].classList.remove('active')
+        }
     
-    // console.log(`scroll position : ${scrollPositionY}`);
-
-    // add class active to about me section
-    if (scrollPositionY < sections[1].offsetTop) {
-        navigationMenu[0].classList.add('active');
-    } else {
-        navigationMenu[0].classList.remove('active')
-    }
-
-    // add class active to skills section
-    if (scrollPositionY > sections[1].offsetTop && 
-        scrollPositionY < sections[2].offsetTop) {
-        navigationMenu[1].classList.add('active');
-    } else {
-        navigationMenu[1].classList.remove('active');
-    }
-
-    // add class active to portfolio section
-    if (scrollPositionY > sections[2].offsetTop &&
-        scrollPositionY < sections[3].offsetTop - output.offsetHeight) {
-        navigationMenu[2].classList.add('active');
-    } else {
-        navigationMenu[2].classList.remove('active');
-    }
+        // add class active to skills section
+        if (scrollPositionY > sections[1].offsetTop && 
+            scrollPositionY < sections[2].offsetTop) {
+            navigationMenu[1].classList.add('active');
+        } else {
+            navigationMenu[1].classList.remove('active');
+        }
     
-    // add class active to contact section
-    if (scrollPositionY > sections[3].offsetTop - output.offsetHeight) {
-        navigationMenu[3].classList.add('active');
-    } else {
-        navigationMenu[3].classList.remove('active');
+        // add class active to portfolio section
+        if (scrollPositionY > sections[2].offsetTop &&
+            scrollPositionY < sections[3].offsetTop - output.offsetHeight) {
+            navigationMenu[2].classList.add('active');
+        } else {
+            navigationMenu[2].classList.remove('active');
+        }
+        
+        // add class active to contact section
+        if (scrollPositionY > sections[3].offsetTop - output.offsetHeight) {
+            navigationMenu[3].classList.add('active');
+        } else {
+            navigationMenu[3].classList.remove('active');
+        }
     }
+
 });
