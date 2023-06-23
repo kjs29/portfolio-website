@@ -781,7 +781,7 @@ footer p {
         display: flex;
         flex-direction: column;
         width: 100%;
-        position: absolute;
+        position: fixed;
         top: 5rem;
     }
     
