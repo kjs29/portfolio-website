@@ -753,7 +753,6 @@ footer p {
 
     #projects img {
         width: 100%;
-        height: fit-content;
     }
 
 }
@@ -762,7 +761,6 @@ footer p {
 @media (max-width: 768px) { 
     #projects img {
         width: 100%;
-        height: fit-content;
     }
 }
 
@@ -861,8 +859,6 @@ footer p {
 
     .output #projects img {
         width: 25rem;
-        height: fit-content;
-        object-fit: cover;
     }
 
     .output::-webkit-scrollbar {
