@@ -751,7 +751,7 @@ footer p {
         font-size: 1.2rem;
     }
 
-    .output #projects img {
+    #projects img {
         width: 100%;
         height: fit-content;
     }
@@ -759,7 +759,12 @@ footer p {
 }
 
 /* Small devices (landscape phones, less than 768px) */
-@media (max-width: 768px) { }
+@media (max-width: 768px) { 
+    #projects img {
+        width: 100%;
+        height: fit-content;
+    }
+}
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width:576px) {
@@ -793,7 +798,7 @@ footer p {
     main {
         display: flex;
         flex-direction: column;
-        height: 95vh;
+        height: 100vh;
         align-self: center;
     }
 
@@ -850,6 +855,11 @@ footer p {
     .output {
         width: 100%;
         overflow-y: scroll;
+    }
+
+    .output #projects img {
+        width: 100%;
+        height: fit-content;
     }
 
     .output::-webkit-scrollbar {
