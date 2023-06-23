@@ -779,7 +779,7 @@ footer p {
     }
     
     .top {
-        height: 5rem;
+        flex-basis: 5rem;
         gap: 0.3rem;
     }
     
@@ -847,7 +847,7 @@ footer p {
         text-decoration: none;
         text-align: center;
         justify-self: center;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .left {
