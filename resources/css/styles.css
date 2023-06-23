@@ -784,7 +784,7 @@ footer p {
     }
     
     .top {
-        flex-basis: 5rem;
+        height: 5rem;
         gap: 0.3rem;
     }
 
@@ -830,7 +830,7 @@ footer p {
     
     .maxSize {
         margin: 0;
-        height: 63rem;
+        height: 60rem;
         left: 0px !important;
         top: 0px !important;
         transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
