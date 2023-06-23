@@ -775,6 +775,7 @@ footer p {
         height: 50rem;
         display: flex;
         flex-direction: column;
+        width: 100%;
     }
     
     .top {
@@ -824,7 +825,7 @@ footer p {
     
     .maxSize {
         margin: 0;
-        height: auto;
+        height: 63rem;
         left: 0px !important;
         top: 0px !important;
         transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
