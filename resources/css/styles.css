@@ -773,7 +773,7 @@ footer p {
 
     .wrapper {
         margin: 1rem;
-        height: auto;
+        height: 60rem;
         display: flex;
         flex-direction: column;
     }
