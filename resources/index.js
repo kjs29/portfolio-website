@@ -208,6 +208,10 @@ let output = document.querySelector('.output');
 
 output.addEventListener('scroll', () => {
     
+    if (window.innerWidth <= 576) {
+        return false;
+    }
+
     // the very top default scrollPosition is 10
     let scrollPositionY = output.scrollTop + 10;
     
@@ -217,7 +221,7 @@ output.addEventListener('scroll', () => {
     sections = Array.from(sections).slice(1);
     
     // console.log(`scroll position : ${scrollPositionY}`);
-    
+
     // add class active to about me section
     if (scrollPositionY < sections[1].offsetTop) {
         navigationMenu[0].classList.add('active');
