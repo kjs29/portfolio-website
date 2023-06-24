@@ -589,7 +589,7 @@ main nav li:hover {
 }
 
 .output #projects img {
-    width: 100%;
+    width: max(60%, 20rem);
     max-width: 48rem;
 }
 
@@ -598,8 +598,8 @@ main nav li:hover {
 }
 
 .output ul li span img {
-    width: 10rem;
-    height: 10rem;
+    width: min(15%, 10rem);
+    height: min(15%, 10rem);
 }
 
 .output ul li span img#java-logo {
@@ -608,14 +608,14 @@ main nav li:hover {
 }
 
 .output ul li span img#django-logo {
-    width: 16rem;
-    height: 8rem;
+    width: min(20%, 16rem);
+    height: min(20%, 8rem);
     padding: 0.7rem;
 }
 
 .output ul.others li img {
-    width: 8rem;
-    height: 8rem;
+    width: min(15%, 6rem);
+    height: min(15%, 6rem);
     border-radius: 1.5rem;
 }
 
@@ -650,7 +650,6 @@ main nav li:hover {
 .output::-webkit-scrollbar-corner {
     background-color: rgb(48, 134, 168);
 }
-
 
 code {
     padding: 0.3rem 0.4rem;
