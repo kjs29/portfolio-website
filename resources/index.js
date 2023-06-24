@@ -8,8 +8,6 @@ topWindow.addEventListener('mousedown', function (e) {
     const offsetX = e.clientX - vsCodeWindow.offsetLeft;
     const offsetY= e.clientY - vsCodeWindow.offsetTop;
     
-    console.log(`offsetX:${offsetX} / offsetY:${offsetY}`);
-    
     const move = e => {
         vsCodeWindow.style.position = 'absolute';
         vsCodeWindow.style.left = `${e.clientX - offsetX}px`;
