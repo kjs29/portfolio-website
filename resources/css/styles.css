@@ -177,15 +177,10 @@ body {
     transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
 }
 
-/* .minimize {
-    transform: perspective(130rem) rotateX(0deg) rotateY(20deg) scale(0.4) translate(50%, 50%);
-    transition: transform 1s;
-    width: 40rem;
-    height: 20rem;
-    bottom: 5rem;
-    right: 5rem;
-    animation: minimize 2s forwards;
-} */
+.minimize {
+    /* transform: perspective(130rem) rotateX(0deg) rotateY(20deg) scale(0.4) translate(50%, 50%); */
+    display: none;
+}
 
 /* 4.1. */
 
@@ -555,6 +550,7 @@ main nav li:hover {
 
 .terminal-middle {
     margin-left: 1.3rem;
+    height: 10rem;
 }
 
 .terminal-middle p {
@@ -786,6 +782,10 @@ footer p {
 
     .terminal-top div:nth-child(-n+2) {
         display: none;
+    }
+
+    .terminal-middle {
+        font-size: 1.2rem;
     }
 
     .output {
