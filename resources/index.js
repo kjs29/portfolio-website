@@ -1,3 +1,4 @@
+
 // drag and drop functionality
 
 let vsCodeWindow = document.querySelector('.wrapper');
@@ -8,11 +9,14 @@ topWindow.addEventListener('mousedown', function (e) {
     const offsetY= e.clientY - vsCodeWindow.offsetTop;
     
     const move = e => {
+        vsCodeWindow.style.position = 'absolute';
         vsCodeWindow.style.left = `${e.clientX - offsetX}px`;
         vsCodeWindow.style.top = `${e.clientY - offsetY}px`;
     }
     document.addEventListener('mousemove', move);
-    document.addEventListener('mouseup', () => document.removeEventListener('mousemove', move), { once: true });
+    document.addEventListener('mouseup', () => {
+        document.removeEventListener('mousemove', move), { once: true }
+    });
 });
 
 // add title's text to terminal name
