@@ -45,6 +45,7 @@ topWindow.addEventListener('dblclick', function() {
 });
 
 // right click controls
+// to see the menu clicking events, go to navigation links
 let rightClickMenu = document.getElementById('rightClickMenu');
 
 let disableContextMenu = e => {
@@ -183,21 +184,25 @@ navLinkFourth.addEventListener('click', ()=> {
 });
 
 function scrollToAboutMe() {
+    vsCodeWindow.style.display = 'block';
     const targetElement = document.querySelector('#about-me');
     targetElement.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToSkills() {
+    vsCodeWindow.style.display = 'block';
     const targetElement = document.querySelector('#skills');
     targetElement.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToProjects() {
+    vsCodeWindow.style.display = 'block';
     const targetElement = document.querySelector('#projects');
     targetElement.scrollIntoView({behavior: 'smooth'});
 }
 
 function scrollToContact() {
+    vsCodeWindow.style.display = 'block';
     const targetElement = document.querySelector('#contact');
     targetElement.scrollIntoView({behavior: 'smooth'});
 }
