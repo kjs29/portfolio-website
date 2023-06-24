@@ -1,3 +1,32 @@
+/* 
+
+    CSS from top to bottom
+
+    1.  *, html, body
+    2.  .rightClickMenu
+    3.  .folder-group
+    4.  .wrapper
+      4.1.  .top
+      4.2.  main
+        4.2.1.  nav
+        4.2.2.  .left
+          4.2.2.1.  .breadcrumb
+          4.2.2.2.  .code
+          4.2.2.3.  .terminal
+        4.2.3.  .output
+          4.2.3.1.  #intro
+          4.2.3.2.  #about-me
+          4.2.3.3.  #skills
+          4.2.3.4.  #projects
+          4.2.3.5.  #contact
+      4.3. footer  
+    5.  responsive design
+      
+*/
+
+
+/* 1. */
+
 * {
     box-sizing: border-box;
 }
@@ -21,13 +50,14 @@ body {
     /* background-image: linear-gradient(to bottom right, red, yellow); */
 }
 
+/* 2. */
+
 #rightClickMenu {
     background-color: rgba(45,45,45,0.9);
     border: 1px solid gray;
     border-radius: 1rem;
     width: 15rem;
     height: fit-content;
-    /* opacity: 0.7; */
     visibility: hidden;
     position: absolute;
     z-index: 999;
@@ -64,6 +94,8 @@ body {
     height: 3rem;
     opacity: 1;
 }
+
+/* 3. */
 
 .folder-group {
     display: flex;
@@ -119,9 +151,7 @@ body {
     border-radius: 0.2rem;
 }
 
-/* .folder:hover {
-    filter: brightness(85%);
-} */
+/* 4. */
 
 .wrapper {
     resize: both;
@@ -156,6 +186,8 @@ body {
     animation: minimize 2s forwards;
 } */
 
+/* 4.1. */
+
 .top {
     display: flex;
     justify-content: flex-start;
@@ -175,7 +207,6 @@ body {
 .top > div {
     display: flex;
     align-items: center;
-    /* border: 2px solid white; */
     width: fit-content;
     margin: 1.5rem;
     gap: 0.8rem;
@@ -265,7 +296,7 @@ body {
     visibility: visible;
 }
 
-/* main */
+/* 4.2. */
 
 main {
     display: grid;
@@ -274,7 +305,7 @@ main {
     height: calc(100% - 7rem);
 }
 
-/* nav */
+/* 4.2.1. */
 
 nav {
     background-color: black;
@@ -399,7 +430,7 @@ main nav li:hover {
     cursor: pointer;
 }
 
-/* left */
+/* 4.2.2. */
 
 .left {
     display: flex;
@@ -410,7 +441,7 @@ main nav li:hover {
     height: 100%;
 }
 
-/* code */
+/* 4.2.2.1. */
 
 .breadcrumb {
     background-color: black;
@@ -418,6 +449,8 @@ main nav li:hover {
     border-bottom: 1px solid #6EC3DF;
     padding: 0.4rem;
 }
+
+/* 4.2.2.2. */
 
 .code {
     flex-grow: 1;
@@ -466,7 +499,6 @@ main nav li:hover {
     border-bottom: 1px dotted rgb(223, 128, 45);
 }
 
-
 .source-code *:before {
     counter-increment: line;
     content: counter(line);
@@ -493,7 +525,7 @@ main nav li:hover {
     color: rgb(223, 128, 45);
 }
 
-/* terminal */
+/* 4.2.2.3. */
 
 .terminal {
     flex-basis: 20rem;
@@ -549,7 +581,7 @@ main nav li:hover {
     border-radius: 0.5rem;
 }
 
-/* output */
+/* 4.2.3. */
 
 .output {
     font-size: 1.6rem;
@@ -564,10 +596,16 @@ main nav li:hover {
     height: 100%;
 }
 
+/* 
+4.2.3.1.
+4.2.3.2.
+4.2.3.3.
+4.2.3.4. 
+*/
+
 .output h1,
 .output h2,
 .output h3 {
-    /* margin-bottom: 1.6rem; */
     padding-bottom: 0.3rem;
     border-bottom: 2px solid #21262d;
     font-weight: 600;
@@ -609,13 +647,13 @@ main nav li:hover {
 
 .output ul li span img#django-logo {
     width: min(20%, 16rem);
-    height: min(20%, 8rem);
+    height: min(10%, 8rem);
     padding: 0.7rem;
 }
 
 .output ul.others li img {
-    width: min(15%, 6rem);
-    height: min(15%, 6rem);
+    width: min(15%, 8rem);
+    height: min(15%, 8rem);
     border-radius: 1.5rem;
 }
 
@@ -660,6 +698,8 @@ code {
     border-radius: 6px;
 }
 
+/* 4.2.3.5. */
+
 .contact-icons {
     display: flex;
     gap: 1rem;
@@ -677,7 +717,7 @@ code {
     border-top: 1px solid gray;
 }
 
-/* footer */
+/* 4.3. */
 
 footer {
     border-top: 1px solid #6EC3DF;
@@ -693,17 +733,17 @@ footer p {
     padding: 1rem;
 }
 
-/* responsive */
+/* 5. */
 
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { 
+@media (max-width: 1200px) { 
     .wrapper {
         position: relative;
     }
 }
 
 /* Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
 
     .wrapper {
         position: relative;
@@ -762,7 +802,7 @@ footer p {
 @media (max-width: 768px) { }
 
 /* X-Small devices (portrait phones, less than 576px) */
-@media (max-width:576px) {
+@media (max-width: 576px) {
     
     body {
         margin: 0;
@@ -775,7 +815,6 @@ footer p {
     }
     
     .wrapper {
-        /* margin-top: 4rem; */
         height: 50rem;
         display: flex;
         flex-direction: column;
