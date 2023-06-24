@@ -819,7 +819,7 @@ footer p {
         height: 50rem;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 85%;
         position: fixed;
         top: 5rem;
         background-color: black;
@@ -843,27 +843,27 @@ footer p {
         position: absolute;
         content: '';
         height: 2px;
-        top: 13px;
-        left: 4px;
+        top: 13.5px;
+        left: 5px;
         visibility: hidden;
     }
 
     .top .green-dot::before {
-        top: 5px;
-        left: 6px;
-        border-top: 8px solid rgb(38, 86, 20);
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid transparent;
-        border-left: 8px solid rgb(38, 86, 20);
+        top: 6.5px;
+        left: 6.5px;
+        border-top: 7px solid rgb(38, 86, 20);
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 7px solid rgb(38, 86, 20);
     }
     
     .top .green-dot::after {
-        top: 7.5px;
-        left: 7.7px;
-        border-top: 8px solid transparent;
-        border-left: 8px solid transparent;
-        border-right: 8px solid rgb(38, 86, 20);
-        border-bottom: 8px solid rgb(38, 86, 20);
+        top: 9px;
+        left: 9px;
+        border-top: 7px solid transparent;
+        border-left: 7px solid transparent;
+        border-right: 7px solid rgb(38, 86, 20);
+        border-bottom: 7px solid rgb(38, 86, 20);
     }
     
     main {
@@ -872,12 +872,14 @@ footer p {
         flex-grow: 1;
         align-self: center;
         margin-top: 5rem;
+        width: 100%;
     }
     
     .maxSize {
         margin: 0;
         position: fixed;
         height: 100%;
+        width: 100%;
         left: 0px !important;
         top: 0rem !important;
         transition: min-width 1s, height 1s, left 0.2s, top 0.5s;
