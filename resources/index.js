@@ -108,7 +108,7 @@ document.querySelector('#my-portfolio').addEventListener('dblclick', function() 
 
 // when Resume.pdf is double clicked, it displays resume in a new tab
 document.querySelector('#resume').addEventListener('dblclick', () => {
-    window.open('./resources/resume.pdf', '_blank');
+    window.open('./resume.pdf', '_blank');
 });
 
 /**********************************************************/
