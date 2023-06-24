@@ -101,9 +101,14 @@ folders.forEach(folder => {
 
 document.addEventListener('click', resetFolderStyles);
 
-// when My-portfolio folder is double clicked, its display is reset
+// when portfolio folder is double clicked, its display is reset
 document.querySelector('#my-portfolio').addEventListener('dblclick', function() {
     vsCodeWindow.style.display = 'unset';
+});
+
+// when Resume.pdf is double clicked, it displays resume in a new tab
+document.querySelector('#resume').addEventListener('dblclick', () => {
+    window.open('./resources/resume.pdf', '_blank');
 });
 
 /**********************************************************/
