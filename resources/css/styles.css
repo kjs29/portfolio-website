@@ -817,7 +817,7 @@ footer p {
     
     .wrapper {
         height: 50rem;
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 85%;
         position: fixed;
