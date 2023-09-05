@@ -106,7 +106,7 @@ document.querySelector('#portfolio').addEventListener('dblclick', function() {
 
 // when Resume.pdf is double clicked, it displays resume in a new tab
 document.querySelector('#resume').addEventListener('dblclick', () => {
-    window.open('https://kjs29.github.io/portfolio-website/resources/resume.pdf', '_blank');
+    window.open('https://kjs29.github.io/portfolio-website/resources/JinsungKim_resume.pdf', '_blank');
 });
 
 /**********************************************************/
