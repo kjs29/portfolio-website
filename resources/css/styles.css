@@ -157,10 +157,10 @@ body {
     resize: both;
     overflow: auto;
     position: absolute;
-    height: 60vh;
+    height: 80vh;
     border: 1px solid #6EC3DF;
     border-radius: 1.3rem;
-    width: 90vh;
+    width: 90vw;
     min-width: 60rem;
     max-width:100%;
     min-height: 35rem;
@@ -619,8 +619,8 @@ main nav li:hover {
 }
 
 .output img#about-me-photo {
-    width: 10rem;
-    height: 10rem;
+    width: 20rem;
+    height: 20rem;
 }
 
 .output #projects img {

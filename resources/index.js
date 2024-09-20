@@ -4,6 +4,8 @@ let vsCodeWindow = document.querySelector('.wrapper');
 let topWindow = vsCodeWindow.querySelector('.top');
 let mainWindow = vsCodeWindow.querySelector('main')
 
+// adding drag and drop functionality
+// mousedown on topWindow element and move -> vsCodeWindow is being dragged
 topWindow.addEventListener('mousedown', function (e) {
     const offsetX = e.clientX - vsCodeWindow.offsetLeft;
     const offsetY= e.clientY - vsCodeWindow.offsetTop;
@@ -19,12 +21,17 @@ topWindow.addEventListener('mousedown', function (e) {
     });
 });
 
-// add title's text to terminal name
+// when the page is fully loaded
 window.onload = function() {
+    
+    // add title's text to terminal name
     const title = document.querySelector('title').innerText;
     let myComputer = document.querySelector('.terminal-command p:last-child');
     myComputer.appendChild(document.createTextNode(title+' % '));
 }
+
+// hide vsCodeWindow by default
+vsCodeWindow.style.display = 'none';
 
 // hide vsCodeWindow on clicking red-dot
 topWindow.querySelector('div.red-dot').addEventListener('click', function() {
